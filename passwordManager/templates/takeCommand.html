@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block body %}
+
+<h2>***********************************<br>
+    s to store password<br>
+    g to generate password<br>
+    r to retrive password<br>
+    d to delete password<br>
+    ***********************************</h2>
+
+<form method='POST' action='/ProcessCommand'>
+<table>
+<p>{{ the_info }}</p>
+<tr><td>command</td><td><input name='command' type='text' width='60'></td></tr>
+</table>
+<p>When you're ready, click this button:</p>
+<p><input value='Do it!' type='SUBMIT'></p>
+</form>
+
+{% endblock %}

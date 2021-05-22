@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block body %}
+
+<h2>{{ the_title }}</h2>
+
+<form method='POST' action='store'>
+    {%csrf_token%}
+<table>
+<p>{{ the_info }}</p>
+<tr><td>service</td><td><input name='command' type='text' width='60'></td></tr>
+    <tr><td>password</td><td><input name='passwd' type='text' width='60'></td></tr>
+</table>
+<p>When you're ready, click this button:</p>
+<p><input value='Do it!' type='SUBMIT'></p>
+</form>
+
+{% endblock %}

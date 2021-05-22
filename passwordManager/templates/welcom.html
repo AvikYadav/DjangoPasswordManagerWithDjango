@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block body %}
+
+<h2>{{ the_title }}</h2>
+<h2>{{ the_info }}</h2>
+
+<form method='POST' action='/'>
+    {%csrf_token%}
+<table>
+<p>Use this form to submit a search request:</p>
+<tr><td>user</td><td><input name='user' type='TEXT' width='60'></td></tr>
+<tr><td>password</td><td><input name='password' type='password' width='60'></td></tr>
+</table>
+<p>When you're ready, click this button:</p>
+<p><input value='Do it!' type='SUBMIT'></p>
+</form>
+<p>{%for message in messages%}</p>
+{{message}}
+{%endfor%}
+
+{% endblock %}
